@@ -12,6 +12,14 @@ body {
     max-width: 1400px;
 }
 
+.navbar-collapse {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    padding-top: 2rem;
+    background: black;
+}
+
 .navbar {
     background-color: var(--dark);
     height: calc(0.14 * 100vh);
@@ -29,6 +37,14 @@ body {
 .nav-item .nav-link:hover,
 .nav-item .nav-link:focus{
     color: var(--yellow);
+}
+
+.navbar-toggler {
+    color: var(--white);
+    border-color: var(--white);
+}
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 /* start special heading */
 .special-heading{
@@ -185,8 +201,6 @@ body {
     .swiper-button-prev::after {
         display: none;
     }
-}
-@media(max-width: 400px) {
     .landing .container h1 {
         font-size: 3rem;
     }
