@@ -213,6 +213,9 @@ body {
         padding-top: 0.5rem;
         font-size: 0.7rem;
     }
+    .landing .container p::after{
+        bottom: 3px;
+    }
 }
 /* end landing */
 /* start about */
