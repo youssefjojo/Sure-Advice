@@ -8,6 +8,10 @@ body {
     font-family: "Roboto", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .custom-container{
     max-width: 1400px;
 }
@@ -56,6 +60,7 @@ body {
     justify-content: center;
 }
 .special-heading h1{
+    /* font-family: "Work Sans", sans-serif; */
     color: #f2eeee;
     font-size: 100px;
     margin: 0;
@@ -93,11 +98,11 @@ body {
 .landing .container p::after {
     content: "";
     width: 100%;
-    height: 50%;
+    height: 75%;
     position: absolute;
     background-color: var(--dark);
     left: 0;
-    bottom: 15px;
+    bottom: 2px;
     animation: slideLeft 1s ease-out forwards;
     -webkit-animation: slideLeft 1s ease-out forwards;
 }
@@ -204,17 +209,14 @@ body {
         font-size: 3rem;
     }
     .landing .container img {
-        max-width: 45px;
+        max-width: 70px;
     }
     .landing .container span {
         font-size: 0.5rem;
     }
     .landing .container p {
         padding-top: 0.5rem;
-        font-size: 0.7rem;
-    }
-    .landing .container p::after{
-        bottom: 3px;
+        font-size: 1rem;
     }
 }
 /* end landing */
@@ -291,8 +293,89 @@ body {
 }
 /* end work */
 
+/* start courses */
+.courses {
+    background-color: var(--white);
+    padding-bottom: 12rem; /* زودنا المسافة لتدي راحة بصرية */
+}
+
+/* الكارد نفسها */
+.course-card {
+    background-color: #fff;
+    border-radius: 28px; /* أنعم */
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.22);
+    transition: all 0.35s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* Hover */
+.course-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.35);
+}
+
+/* صورة الكورس */
+.course-img {
+    position: relative;
+    height: 260px; /* ⬅️ كبرنا الصورة */
+    overflow: hidden;
+}
+
+.course-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.course-card:hover .course-img img {
+    transform: scale(1.12);
+}
+
+/* المحتوى */
+.course-content {
+    padding: 35px 30px; /* ⬅️ محتوى أوسع */
+    text-align: center;
+}
+
+.course-content h4 {
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 1.4rem; /* ⬅️ عنوان أكبر */
+    margin-bottom: 12px;
+}
+
+.course-content p {
+    font-size: 1rem; /* ⬅️ نص أوضح */
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+/* التاج */
+.course-tag {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: #000;
+    padding: 8px 18px; /* ⬅️ أكبر */
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* تحسين إضافي للشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .course-card {
+        transform: scale(1.05);
+    }
+}
+/* end courses */
+
 /* start portfolio */
 .portfolio {
+    background-color: var(--white);
     padding-bottom: 7rem;
 }
 
