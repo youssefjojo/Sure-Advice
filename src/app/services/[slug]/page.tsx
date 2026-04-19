@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CheckCircle2, Users, Calculator, Scale, TrendingUp } from "lucide-react";
 import { services } from "@/data/services";
 import { CTABanner } from "@/components/home/CTABanner";
+import { COMPANY } from "@/lib/constants";
 
 const iconMap: Record<string, React.ElementType> = {
   Users, Calculator, Scale, TrendingUp,
@@ -25,6 +26,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: service.title,
     description: service.shortDescription,
+    alternates: {
+      canonical: `/services/${service.slug}`,
+    },
+    keywords: ["Sure Advice", "sure-advice", "sure advice", service.title, "advice"],
+    openGraph: {
+      type: "article",
+      title: `${service.title} | ${COMPANY.name}`,
+      description: service.shortDescription,
+      url: `${COMPANY.url}/services/${service.slug}`,
+      images: [{ url: `${COMPANY.url}${service.image}` }],
+    },
   };
 }
 

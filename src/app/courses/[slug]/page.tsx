@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Clock, BarChart3, CheckCircle2 } from "lucide-react";
 import { courses } from "@/data/courses";
+import { COMPANY } from "@/lib/constants";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -20,6 +21,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: course.title,
     description: course.description,
+    alternates: {
+      canonical: `/courses/${course.slug}`,
+    },
+    keywords: ["Sure Advice", "sure-advice", "sure advice", course.title, "advice"],
+    openGraph: {
+      type: "article",
+      title: `${course.title} | ${COMPANY.name}`,
+      description: course.description,
+      url: `${COMPANY.url}/courses/${course.slug}`,
+      images: [{ url: `${COMPANY.url}${course.image}` }],
+    },
   };
 }
 

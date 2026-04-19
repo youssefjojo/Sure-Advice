@@ -7,6 +7,10 @@ import { CTABanner } from "@/components/home/CTABanner";
 export const metadata: Metadata = {
   title: "About Us",
   description: `Learn about ${COMPANY.name} — Egypt's leading HR outsourcing company with ${COMPANY.marketShare}% market share.`,
+  alternates: {
+    canonical: "/about",
+  },
+  keywords: ["Sure Advice", "sure-advice", "sure advice", "advice", "HR outsourcing Egypt"],
 };
 
 const values = [

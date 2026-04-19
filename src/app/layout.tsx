@@ -20,13 +20,22 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(COMPANY.url),
   title: {
     default: `${COMPANY.name} | #1 HR Outsourcing & Business Consulting Company in Egypt`,
     template: `%s | ${COMPANY.name}`,
   },
-  description: COMPANY.description,
+  description:
+    "Sure Advice (sure-advice) provides HR outsourcing and business consulting in Egypt. If you searched sure advice, sure, or advice, you are in the right place.",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Sure Advice",
+    "sure-advice",
+    "sure advice",
+    "sure",
+    "advice",
     "HR outsourcing Egypt",
     "employee outsourcing",
     "HR consultancy",
@@ -38,6 +47,7 @@ export const metadata: Metadata = {
     "personnel administration",
   ],
   authors: [{ name: COMPANY.name }],
+  applicationName: COMPANY.name,
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -47,7 +57,24 @@ export const metadata: Metadata = {
     description: COMPANY.description,
     images: [{ url: `${COMPANY.url}/images/logo.png`, width: 512, height: 512 }],
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: `${COMPANY.name} | #1 HR Outsourcing & Business Consulting Company in Egypt`,
+    description:
+      "Sure Advice (sure-advice): trusted HR outsourcing and business consulting partner in Egypt.",
+    images: [`${COMPANY.url}/images/logo.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/images/logo.png",
     apple: "/images/logo.png",

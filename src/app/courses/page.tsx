@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "Our Courses",
   description:
     "Professional courses with real value — HR, Web Design, Corporate Law, and Franchise Agreement courses by Sure Advice.",
+  alternates: {
+    canonical: "/courses",
+  },
+  keywords: ["Sure Advice", "sure-advice", "sure advice", "professional courses Egypt", "advice"],
 };
 
 export default function CoursesPage() {

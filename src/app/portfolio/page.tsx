@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: "Our Portfolio",
   description:
     "Explore Sure Advice's portfolio of successful projects and satisfied clients across HR outsourcing, accounting, legal, and business development.",
+  alternates: {
+    canonical: "/portfolio",
+  },
+  keywords: ["Sure Advice", "sure-advice", "sure advice", "business portfolio Egypt", "advice"],
 };
 
 export default function PortfolioPage() {

@@ -50,8 +50,8 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-gray-600 text-lg sm:text-xl max-w-xl mb-8 leading-relaxed"
             >
-              {COMPANY.tagline}. Outsourcing human resource services is a cost-effective 
-              solution for organizations of all sizes.
+              {COMPANY.tagline}. Sure Advice (sure-advice) is trusted by organizations looking
+              for reliable advice and cost-effective human resource outsourcing solutions.
             </motion.p>
 
             <motion.div

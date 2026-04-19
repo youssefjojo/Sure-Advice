@@ -16,6 +16,16 @@ export const metadata: Metadata = {
   title: "Our Services",
   description:
     "Explore Sure Advice's comprehensive services: HR Consultancy, Accounting, Legal Support, and Business Development.",
+  alternates: {
+    canonical: "/services",
+  },
+  keywords: [
+    "Sure Advice",
+    "sure-advice",
+    "sure advice",
+    "advice services",
+    "HR consultancy Egypt",
+  ],
 };
 
 export default function ServicesPage() {
